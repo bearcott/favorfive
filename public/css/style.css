@@ -12,13 +12,15 @@ body {
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 3em;
-  min-height: 600px;
+  min-height: 20em;
 }
 .form-group {
   margin-top: -1em;
+  height: 4em;
 }
 .navbar {
   margin: 0 0;
+  border-radius: 0;
 }
 .navbar-inverse {
   height: 4em;
@@ -71,7 +73,7 @@ color: white;
   cursor: pointer;
 }
 .signup {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 1em;
 }
 .form-control {
@@ -80,7 +82,7 @@ color: white;
   height: 4em;
 }
 label {
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-family: 'Open Sans';
   font-weight: 400;
 }
@@ -91,6 +93,7 @@ label {
   border: 3px solid #1D2E4C;
   background: transparent;
   transition: 0.4s ease all;
+  margin-top: -1em;
 }
 .btn-primary:hover {
 cursor: pointer;
@@ -105,4 +108,8 @@ a {
 }
 a:hover {
   color: #452B72;
+}
+.fail {
+  font-size: 0.8em;
+  padding-top: 1.5em;
 }
