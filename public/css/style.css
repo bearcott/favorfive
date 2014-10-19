@@ -113,7 +113,3 @@ a:hover {
   font-size: 0.8em;
   padding-top: 1.5em;
 }
-.createform {
-  display: flex;
-  flex-direction: column;
-}
