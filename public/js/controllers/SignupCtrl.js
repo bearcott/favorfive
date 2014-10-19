@@ -4,6 +4,7 @@ angular.module('SignupCtrl', []).controller('SignupController', function($scope,
 		user.set("username", guy.username);
 		user.set("password", guy.pass);
 		user.set("email", guy.email);
+		user.set("phone", guy.phone);
 		user.signUp(null, {
 			success: function(usr) {
 				$location.path("/login");
