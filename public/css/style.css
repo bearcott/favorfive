@@ -1,1 +1,45 @@
-body { padding-top:30px; }
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300);
+body {
+  padding-top:30px;
+}
+.jumbotron {
+  color: #1D2E4C;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 3em;
+  height: 12em;
+}
+.navbar {
+  margin: 0 0;
+}
+.navbar-inverse {
+  height: 4em;
+  background: #1D2E4C;
+  border: none;
+}
+.navbar-brand {
+  font-size: 2em;
+}
+.navbar-header {
+  float:left;
+  margin-left: 15%;
+}
+.navbar-nav {
+  float: right;
+  margin-right: 15%;
+  font-size: 1.5em;
+}
+.navbar-inverse .navbar-brand {
+color: white;
+}
+.navbar-inverse .navbar-nav>li>a {
+color: white;
+}
+.navbar-inverse .navbar-brand:hover,.navbar-inverse .navbar-brand:focus {
+    color: white;
+    background-color:transparent
+}
+.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus {
+    color: white;
+    background-color:transparent
+}
