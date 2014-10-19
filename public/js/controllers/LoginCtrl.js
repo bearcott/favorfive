@@ -2,7 +2,7 @@ angular.module('LoginCtrl', []).controller('LoginController' ,function($scope, $
 	$scope.login = function(guy) {
 		Parse.User.logIn(guy.username,guy.pass, {
 			success: function(usr) {
-				$location.path("/");
+				$location.path("/feed");
 				$scope.$apply();
 			},
 			error: function(usr, error) {

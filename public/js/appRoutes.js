@@ -8,9 +8,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'MainController'
 		})
 
-		.when('/nerds', {
-			templateUrl: 'views/nerd.html',
-			controller: 'NerdController'
+		.when('/feed', {
+			templateUrl: 'views/feed.html',
+			controller: 'FeedController'
 		})
 
 		.when('/signup', {
@@ -21,6 +21,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		.when('/login', {
 			templateUrl: 'views/login.html',
 			controller: 'LoginController'	
+		})
+
+		.when('/logout', {
+			templateUrl: 'views/logout.html',
+			controller: 'LogoutController'	
 		});
 
 	$locationProvider.html5Mode(true);
