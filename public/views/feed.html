@@ -1,31 +1,29 @@
-<div class="jumbotron text-center flex">
+<div class="jumbotron text-center row">
+	<section class="left col-md-3 col-md-offset-1">
+	  <img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y" class="avatar">
+	  <p class="welcome">Welcome <b>{{ user.attributes.username }}</b></p>
+	  <label class="contactinfo">{{ user.attributes.email }}</label>
+	  <label class="contactinfo">{{ user.attributes.phone }}</label>
+	</section>
 
+	<section class="right col-md-7">
 
-<section class="left">
-  <p class="welcome">Welcome<!--Name of person who logged in--> {{ user.attributes.username }}</p>
-  <img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y" class="avatar">
-  <label class="contactinfo">{{ user.attributes.email }}</label>
-  <label class="contactinfo">{{ user.attributes.phone }}</label>
-</section>
-
-<section class="right">
-
-<form class="create">
-  <img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y" id="leftcard">
-  <p class="newfavor">Ask For A Favor</p>
-
-  <input type="text" placeholder="Favor" ng-model="favor.name" class="enter">
-  <textarea ng-model="favor.description"></textarea>
-  <button ng-click="addFavor(favor)" class="btn btn-primary add">Add</button>
-</form>
-
-
-<img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y">
-</section>
-
-
-
-
-
+		<form class="tile post">
+		  <input type="text" placeholder="Ask For A Favor" ng-model="favor.name" class="enter">
+		  <textarea placeholder="Favor Description..." ng-model="favor.desc"></textarea>
+		  <button ng-click="addFavor(favor)" class="btn btn-primary add"><span class="money">$5</span>Request a Favor</button>
+		  <div class="clear"></div>
+		</form>
+		<div class="tile get" ng-repeat="favor in favors | orderBy: '-createdAt'">
+			<h2>{{ favor.get('favor') }}</h2>
+	  		<img src="http://www.gravatar.com/avatar/{{ favor.get('emailHash') }}?d=retro&f=y">
+			{{ convertToDate(favor.get('time')) }}
+			<div class="hid">
+				{{ favor.get('description') }}
+				<hr>
+				{{ favor.get('phone') }} {{ favor.get('email') }}
+			</div>
+		</div>
+	</section>
 
 </div>

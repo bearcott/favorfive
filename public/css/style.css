@@ -1,23 +1,32 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300);
 body {
   width: 100%;
+  background: #FCFCFC;
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 100%;
   }
 }
+.clear {
+  clear: both;
+}
 .container {
   padding: 0 0;
   margin: 0 0;
   width: 100%;
 }
+span.thin {
+  font-weight: 100;
+}
 .jumbotron {
   color: #1D2E4C;
   font-family: 'Open Sans';
   font-weight: 400;
-  font-size: 3em;
+  font-size: 14pt;
   min-height: 20em;
+  background: none;
+  padding: 0 50px;
 }
 .form-group {
   margin-top: -1em;
@@ -29,15 +38,15 @@ body {
 }
 .navbar-inverse {
   height: 4em;
-  background: #1D2E4C;
+  background: #C0E5F5;
   border: none;
 }
 .navbar-brand {
   font-size: 1.7em;
+
 }
 .navbar-header {
   float:left;
-  margin-left: 15%;
 }
 .navbar-nav {
   float: right;
@@ -45,10 +54,20 @@ body {
   font-size: 1.3em;
 }
 .navbar-inverse .navbar-brand {
-color: white;
+color: #647E91;
+padding: 18px 27px;
+font-size: 26px;
+font-weight: bold;
 }
 .navbar-inverse .navbar-nav>li>a {
-color: white;
+color: #647E91;
+padding: 18px 30px;
+font-size: 20px;
+font-weight: bold;
+background: #ADDAED;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  background: #627CB3 !important;
 }
 .navbar-inverse .navbar-brand:hover,.navbar-inverse .navbar-brand:focus {
     color: white;
@@ -68,7 +87,7 @@ color: white;
   margin: 0 auto;
   border: 3px solid #1D2E4C;
   border-radius: 4px;
-  font-size: 0.7em;
+  font-size: 1em;
   transition: 0.4s ease all;
 }
 .learn:hover {
@@ -80,11 +99,15 @@ color: white;
 .signup {
   font-size: 1.3em;
   margin-bottom: 1em;
+  color: #888;
 }
 .form-control {
-  width: 55%;
+  width: 300px;
+  border: none;
+  font-size: 1em;
+  box-shadow: none;
   margin: 0 auto;
-  height: 4em;
+  height: 60px;
 }
 label {
   font-size: 0.6em;
@@ -92,19 +115,18 @@ label {
   font-weight: 400;
 }
 .btn-primary {
-  color: #1D2E4C;
-  width: 5em;
-  font-size: 0.7em;
-  border: 3px solid #1D2E4C;
-  background: transparent;
+  color: #FFF;
+  width: 300px;
+  font-weight: bold;
+  border: none;
+  background: #7AB4DD;
   transition: 0.4s ease all;
-  margin-top: -1em;
+  padding: 20px 10px;
 }
 .btn-primary:hover {
 cursor: pointer;
-border: 3px solid white;
-background: #1D2E4C;
-color: white;
+background: #D1EAFC;
+color: #7AB4DD;
 }
 a {
   color: #452B72;
@@ -117,66 +139,117 @@ a:hover {
 .fail {
   font-size: 0.8em;
   padding-top: 1.5em;
+  color: #999;
 }
 .flex {
   display: flex;
   flex-direction: row;
-  justify-content: center;s
+  justify-content: center;
 }
 .left {
-  width: 20%;
-  order: 1;
-  border: 2px solid red;
+  padding-top: 30px;
+  line-height: 1em;
+  text-align: left;
+}
+.left > * {
+margin: 0;
+font-size: 1em;
+text-align: left;
+line-height: 1.2em;
+display: block;
+padding: 0 10px;
+color: #bbb;
+font-weight: 100;
+}
+.left p {
+  color: #555;
+  margin-top: 2px;
+  font-weight: normal;
 }
 .right {
-  width: 80%;
-  order: 2;
-  border: 2px solid red;
-}
-.create {
-  margin: 0 auto;
-  border: 2px solid red;
-  width: 70%;
-  background: #DAD8D8;
-  margin-top: 0.5em;
-  text-align: center;
 }
 textarea {
   height: 1.7em;
   margin-bottom: -0.3em;
   margin-top: 0.5em;
 }
-.add {
-  margin-top: 0.5em;
-  font-size: 0.6em;
-  margin-left: 80%;
-}
-.add:hover {
-  border: 3px solid #DAD8D8;
-}
 .contactinfo {
 }
+
+.tile {
+  margin: 20px auto;
+  background: #f2f2f2;
+  position: relative;
+  padding: 30px;
+  top: 0;
+  text-align: left;
+}
+
 .avatar {
   display: block;
   margin: 0 auto;
   border-radius: 100%;
+  float:left;
 }
-#leftcard {
-  margin-right: 100%;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
-  height: 1.7em;
-  width: 1.7em;
+.tile img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
 }
-input[placeholder="Favor"] {
-  margin: 0 auto;
-  height: 2em;
-  font-size: 0.5em;
-  text-align: center;
+.tile.post {
+  padding-bottom: 0;
 }
-.jumbotron p{
-  font-size: 0.7em;
-  text-align: center;
-  margin-top: -1.5em;
+.tile input, textarea {
+  width: 100%;
+  border: none;
+  margin: none;
+  padding: 10px;
+  color: #555;
 }
+.tile textarea {
+  min-height: 100px;
+  margin-top: none;
+}
+.tile .btn {
+  float: right;
+  display: block;
+  width: 180px;
+  margin: 15px 0;
+  padding: 10px;
+  padding-left: 40px;
+  position: relative;
+}
+hr {
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.tile .money {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  left: 15px;
+  border-radius: 100%;
+  top: 5px;
+  background: #9AE27D;
+}
+.tile.get:after {
+  content: "$5";
+  position: absolute;
+  top: 20px;
+  right: 0;
+  margin-right: -30px;
+  padding: 5px 20px;
+  color: #FFF;
+  font-weight: bold;
+  background: #9AE27D;
+  box-shadow: 0px 5px rgba(0,0,0,0.1);
+}
+.tile.get {
+  padding-left: 50px;
+}
+.tile.get 
