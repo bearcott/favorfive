@@ -1,6 +1,6 @@
 <div class="jumbotron text-center">
 	<form ng-controller="LoginController" novalidate class="simple-form">
-	<div class="signup">Signup</p>
+	<div class="signup">Signup</div>
 	<div class="form-group">
 		<label>Name</label>
 		<input type="text" class="form-control" ng-model="guy.name" /><br />
@@ -13,8 +13,8 @@
 		<label>Password</label>
 		<input type="password" class="form-control" ng-model="guy.pass" /><br />
 	</div>
-	<button ng-click="makeusr(guy)">SAVE</button>
+	<button ng-click="makeusr(guy)" class="btn btn-primary">SUBMIT</button>
 	<hr>
-	Already have an account? <a href="/signup">Sign in</a>
+	Already have an account? <a href="/signup" class="signin">Sign in</a>
 	</form>
 </div>

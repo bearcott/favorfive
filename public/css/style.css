@@ -14,9 +14,9 @@ body {
   font-size: 3em;
   min-height: 600px;
 }
-
-
-
+.form-group {
+  margin-top: -1em;
+}
 .navbar {
   margin: 0 0;
 }
@@ -72,10 +72,37 @@ color: white;
 }
 .signup {
   font-size: 1.5em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
+}
+.form-control {
+  width: 55%;
+  margin: 0 auto;
+  height: 4em;
 }
 label {
   font-size: 0.7em;
   font-family: 'Open Sans';
   font-weight: 400;
+}
+.btn-primary {
+  color: #1D2E4C;
+  width: 5em;
+  font-size: 0.7em;
+  border: 3px solid #1D2E4C;
+  background: transparent;
+  transition: 0.4s ease all;
+}
+.btn-primary:hover {
+cursor: pointer;
+border: 3px solid white;
+background: #1D2E4C;
+color: white;
+}
+a {
+  color: #452B72;
+  text-decoration: none;
+  transition: 0.4s ease all;
+}
+a:hover {
+  color: #452B72;
 }
