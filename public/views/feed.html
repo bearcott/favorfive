@@ -4,6 +4,14 @@
 	  <p class="welcome">Welcome <b>{{ user.attributes.username }}</b></p>
 	  <label class="contactinfo">{{ user.attributes.email }}</label>
 	  <label class="contactinfo">{{ user.attributes.phone }}</label>
+	  <div class="drop" ng-drop="true" ng-drop-success="onDropComplete($data,$event)">
+	  	<div class="piece" ng-repeat="obj in droppedObjects" ng-drag="true" ng-drag-data="favor" ng-drag-success="onDragSuccess($data,$event)" ng-center-anchor="{{centerAnchor}}">
+            <h4>{{ obj.get('username') }}</h4>
+            <h3>{{ obj.get('favor') }}</h3>
+            <h4>{{ obj.get('phone') }}</h4>
+            <h4>{{ obj.get('email') }}</h4>
+        </div>
+	  </div>
 	</section>
 
 	<section class="right col-md-7">
@@ -14,14 +22,15 @@
 		  <button ng-click="addFavor(favor)" class="btn btn-primary add"><span class="money">$5</span>Request a Favor</button>
 		  <div class="clear"></div>
 		</form>
-		<div class="tile get" ng-repeat="favor in favors | orderBy: '-createdAt'">
+		<div class="tile get" ng-drag="true" ng-drag-data="favor" ng-repeat="favor in favors | orderBy: '-createdAt'">
+			<h3>{{ favor.get('username') }}</h3>
 			<h2>{{ favor.get('favor') }}</h2>
 	  		<img src="http://www.gravatar.com/avatar/{{ favor.get('emailHash') }}?d=retro&f=y">
-			{{ convertToDate(favor.get('time')) }}
+			<!-- {{ convertToDate(favor.get('time')) }} -->
 			<div class="hid">
 				{{ favor.get('description') }}
 				<hr>
-				{{ favor.get('phone') }} {{ favor.get('email') }}
+				{{ favor.get('phone') }}&nbsp; — &nbsp;{{ favor.get('email') }}
 			</div>
 		</div>
 	</section>

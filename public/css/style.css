@@ -28,6 +28,9 @@ span.thin {
   background: none;
   padding: 0 50px;
 }
+.simple-form {
+  margin-top: 100px;
+}
 .form-group {
   margin-top: -1em;
   height: 4em;
@@ -151,6 +154,32 @@ a:hover {
   line-height: 1em;
   text-align: left;
 }
+.left .drop {
+  position: fixed;
+  bottom: 0;
+  margin: 50px 0;
+  width: 250px;
+  height: 450px;
+  padding: 0;
+  border: 3px dashed rgba(0,0,0,0.1);
+  overflow: scroll;
+}
+.left .drop .piece {
+  padding: 10px;
+}
+.left .drop .piece:nth-child(even) {
+  background: #FFF7EC;
+}
+.left .drop .piece h4 {
+  font-size: 0.7em;
+  margin: 0;
+  color: #aaa;
+}
+.left .drop .piece h3 {
+  font-size: 1em;
+  margin: 3px 0;
+  color: #666;
+}
 .left > * {
 margin: 0;
 font-size: 1em;
@@ -165,6 +194,7 @@ font-weight: 100;
   color: #555;
   margin-top: 2px;
   font-weight: normal;
+  margin-bottom: 0;
 }
 .right {
 }
@@ -203,6 +233,8 @@ textarea {
 }
 .tile.post {
   padding-bottom: 0;
+  -webkit-animation: lol .2s; /* Chrome, Safari, Opera */
+  animation: lol .2s;
 }
 .tile input, textarea {
   width: 100%;
@@ -242,6 +274,7 @@ hr {
   position: absolute;
   top: 20px;
   right: 0;
+  opacity: 1;
   margin-right: -30px;
   padding: 5px 20px;
   color: #FFF;
@@ -249,8 +282,18 @@ hr {
   background: #9AE27D;
   box-shadow: 0px 5px rgba(0,0,0,0.1);
 }
+/* Chrome, Safari, Opera */
+@-webkit-keyframes lol {
+    from {top: -20px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
 .tile.get {
   padding-left: 50px;
+  -webkit-animation: lol .5s; /* Chrome, Safari, Opera */
+  animation: lol .5s;
+}
+.tile h2 {
+  margin: 5px 0;
 }
 .top {
   font-size: 3.5em;
@@ -314,4 +357,9 @@ hr {
 .motto {
   font-weight: bold;
 }
-.tile.get
+.tile h3 {
+  font-size: 0.8em;
+  margin: 0;
+  color: #999;
+  font-style: italic;
+}

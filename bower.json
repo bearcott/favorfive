@@ -6,6 +6,7 @@
 		"angular": "latest",
 		"angular-route": "latest",
 		"jquery": "latest",
-		"tag-it": "latest"	
+		"tag-it": "latest",
+		"angular-dragdop": "latest"	
 	}
 }
