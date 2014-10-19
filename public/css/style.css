@@ -2,6 +2,11 @@
 body {
   width: 100%;
 }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
 .container {
   padding: 0 0;
   margin: 0 0;

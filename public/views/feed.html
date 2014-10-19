@@ -4,6 +4,8 @@
 <div class="newOffer object">Ask For A Favor</div>
   <form class="create">
     <input type="text" placeholder="Favor" ng-model="favor.name">
+    <label>{{ user.attributes.email }}</label>
+    <label>{{ user.attributes.phone }}</label>
     <textarea ng-model="favor.description"></textarea>
     <button ng-click="addFavor(favor)">Add</button>
   </form>

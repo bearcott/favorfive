@@ -6,7 +6,6 @@
 		"angular": "latest",
 		"angular-route": "latest",
 		"jquery": "latest",
-		"tag-it": "latest",
-		"bootstrap-formhelpers": "latest"	
+		"tag-it": "latest"	
 	}
 }
