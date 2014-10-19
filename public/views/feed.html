@@ -1,12 +1,31 @@
-<div class="jumbotron text-center">
+<div class="jumbotron text-center flex">
+
+
+<section class="left">
   <p class="welcome">Welcome<!--Name of person who logged in--> {{ user.attributes.username }}</p>
-  <img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y">
-<div class="newOffer object">Ask For A Favor</div>
-  <form class="create">
-    <input type="text" placeholder="Favor" ng-model="favor.name">
-    <label>{{ user.attributes.email }}</label>
-    <label>{{ user.attributes.phone }}</label>
-    <textarea ng-model="favor.description"></textarea>
-    <button ng-click="addFavor(favor)">Add</button>
-  </form>
+  <img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y" class="avatar">
+  <label class="contactinfo">{{ user.attributes.email }}</label>
+  <label class="contactinfo">{{ user.attributes.phone }}</label>
+</section>
+
+<section class="right">
+
+<form class="create">
+  <img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y" id="leftcard">
+  <p class="newfavor">Ask For A Favor</p>
+
+  <input type="text" placeholder="Favor" ng-model="favor.name" class="enter">
+  <textarea ng-model="favor.description"></textarea>
+  <button ng-click="addFavor(favor)" class="btn btn-primary add">Add</button>
+</form>
+
+
+<img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y">
+</section>
+
+
+
+
+
+
 </div>
