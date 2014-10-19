@@ -1,6 +1,6 @@
 angular.module('SignupCtrl', []).controller('SignupController', function($scope, $location) {
 	$scope.makeusr = function(guy) {
-		var user = new Parse.User('lol');
+		var user = new Parse.User();
 		user.set("username", guy.username);
 		user.set("password", guy.pass);
 		user.set("email", guy.email);
