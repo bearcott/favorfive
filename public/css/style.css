@@ -1,14 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300);
 body {
-  padding-top:30px;
+  width: 100%;
+}
+.container {
+  padding: 0 0;
+  margin: 0 0;
+  width: 100%;
 }
 .jumbotron {
   color: #1D2E4C;
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 3em;
-  height: 12em;
+  min-height: 600px;
 }
+
+
+
 .navbar {
   margin: 0 0;
 }
@@ -18,7 +26,7 @@ body {
   border: none;
 }
 .navbar-brand {
-  font-size: 2em;
+  font-size: 1.7em;
 }
 .navbar-header {
   float:left;
@@ -27,7 +35,7 @@ body {
 .navbar-nav {
   float: right;
   margin-right: 15%;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .navbar-inverse .navbar-brand {
 color: white;
@@ -42,4 +50,32 @@ color: white;
 .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus {
     color: white;
     background-color:transparent
+}
+.description {
+  margin-top: 2em;
+}
+.learn {
+  margin-top: 0em;
+  width: 8em;
+  text-align: center;
+  margin: 0 auto;
+  border: 3px solid #1D2E4C;
+  border-radius: 4px;
+  font-size: 0.7em;
+  transition: 0.4s ease all;
+}
+.learn:hover {
+  border: 3px solid #1D2E4C;
+  background: #1D2E4C;
+  color: white;
+  cursor: pointer;
+}
+.signup {
+  font-size: 1.5em;
+  margin-bottom: 3em;
+}
+label {
+  font-size: 0.7em;
+  font-family: 'Open Sans';
+  font-weight: 400;
 }
