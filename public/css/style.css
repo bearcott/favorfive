@@ -24,7 +24,7 @@ span.thin {
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 14pt;
-  min-height: 20em;
+  min-height: 25em;
   background: none;
   padding: 0 50px;
 }
@@ -299,11 +299,19 @@ hr {
   color: black;
   margin: 1em auto;
   text-align: left;
-
 }
 .cm {
   font-size: 0.5em;
   margin: 0em auto;
   padding-bottom: 1em;
+}
+.main {
+  background-image: url('http://84d1f3.medialib.glogster.com/czins/media/37/37356e6cc804c1bf3725e83962c686fe960aa09f/ut-austin-1.jpg');
+  background-size: cover;
+  background-position: 0% 0%;
+  opacity: 0.8;
+}
+.motto {
+  font-weight: bold;
 }
 .tile.get
