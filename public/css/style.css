@@ -252,4 +252,58 @@ hr {
 .tile.get {
   padding-left: 50px;
 }
-.tile.get 
+.top {
+  font-size: 3.5em;
+  margin-top: 1em;
+}
+.learn {
+  margin-top: 3.5em;
+}
+#about {
+  font-size: 4em;
+  font-family: 'Open Sans';
+  color: #1D2E4C;
+  margin: 2em auto;
+  text-align: center;
+  height: 3em;
+}
+.wrapper {
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+  height: 6em;
+  padding-top: 0.5em;
+}
+.abt {
+  font-size: 0.65em;
+  margin: 0 auto;
+}
+.one {
+  order: 1;
+  width: 33%;
+}
+.two {
+  order: 2;
+  width: 33%;
+}
+.three {
+  order: 3;
+  width: 33%;
+}
+.text {
+  max-width: 80%;
+  font-size: 0.35em;
+  color: black;
+  margin: 1em auto;
+  text-align: left;
+
+}
+.cm {
+  font-size: 0.5em;
+  margin: 0em auto;
+  padding-bottom: 1em;
+}
+.tile.get
