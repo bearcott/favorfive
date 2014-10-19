@@ -94,7 +94,6 @@ background: #ADDAED;
   transition: 0.4s ease all;
 }
 .learn:hover {
-  border: 3px solid #1D2E4C;
   background: #1D2E4C;
   color: white;
   cursor: pointer;
@@ -297,10 +296,13 @@ hr {
 }
 .top {
   font-size: 3.5em;
-  margin-top: 1em;
+  padding-top: 1em;
 }
 .learn {
   margin-top: 3.5em;
+}
+.top, .motto {
+  text-shadow: 0 0 3px #FFF;
 }
 #about {
   font-size: 4em;
@@ -344,14 +346,15 @@ hr {
   text-align: left;
 }
 .cm {
-  font-size: 0.5em;
+  font-size: 0.3em;
   margin: 0em auto;
   padding-bottom: 1em;
+  color: #bbb;
 }
 .main {
   background-image: url('http://84d1f3.medialib.glogster.com/czins/media/37/37356e6cc804c1bf3725e83962c686fe960aa09f/ut-austin-1.jpg');
   background-size: cover;
-  background-position: 0% 0%;
+  background-position: top;
   opacity: 0.8;
 }
 .motto {
