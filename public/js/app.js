@@ -1,7 +1,7 @@
 angular.module('sampleApp', ['ngRoute', 
 	'appRoutes', 
 	'MainCtrl', 
-	'NerdCtrl', 'NerdService', 
-	'GeekCtrl', 'GeekService', 
+	'NerdCtrl', 'NerdService',
+	'SignupCtrl','SignupService', 
 	'LoginCtrl','LoginService'
 	]);

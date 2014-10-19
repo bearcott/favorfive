@@ -1,0 +1,19 @@
+<div class="jumbotron text-center">
+	<form ng-controller="LoginController" novalidate class="simple-form">
+	<div class="form-group">
+		<label>Name:</label>
+		<input type="text" class="form-control" ng-model="guy.name" /><br />
+	</div>
+	<div class="form-group">
+		<label>E-mail:</label>
+		<input type="email" class="form-control" ng-model="guy.email" /><br />
+	</div>
+	<div class="form-group">
+		<label>Password</label>
+		<input type="password" class="form-control" ng-model="guy.pass" /><br />
+	</div>
+	<button ng-click="makeusr(guy)">SAVE</button>
+	<hr>
+	Already have an account? <a href="/signup">Sign in</a>
+	</form>
+</div>
