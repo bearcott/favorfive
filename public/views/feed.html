@@ -3,12 +3,9 @@
   <img src="http://www.gravatar.com/avatar/{{ emailHash }}?d=retro&f=y">
 <div class="newOffer object">Ask For A Favor</div>
 <form class="create">
-  <input type="text" placeholder="Favor">
-  <input type="text" placeholder="Location">
-  <input type="text" placeholder = "Name">
-  <input type="text" placeholder = "Phone Number">
-  <input type="text" placeholder = "Email">
-  <button>Add</button>
+  <input type="text" placeholder="Favor" ng-model="favor.name">
+  <textarea ng-model="favor.description"></textarea>
+  <button ng-click="addFavor(favor)">Add</button>
 </form>
 
   <div class="object">
